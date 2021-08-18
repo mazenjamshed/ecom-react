@@ -4,8 +4,8 @@ import "./menu-list.styles.scss";
 const MenuList = ({ sections }) => {
   return (
     <div className="menu__list">
-      {sections.map(({ title, subtitle, id }) => (
-        <MenuItem title={title} subtitle={subtitle} key={id}></MenuItem>
+      {sections.map(({  id,...otherProps }) => (
+        <MenuItem subtitle="shop now"  key={id} {...otherProps}></MenuItem>
       ))}
     </div>
   );

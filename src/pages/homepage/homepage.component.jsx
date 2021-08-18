@@ -8,29 +8,39 @@ class HomePage extends React.Component {
     this.state = {
       sections: [
         {
-          title: "men",
-          id: 1,
-          subtitle: "Shop Now",
-        },
-        {
-          title: "women",
-          id: 2,
-          subtitle: "Shop Now",
-        },
-        {
           title: "hats",
-          id: 3,
-          subtitle: "Shop Now",
+          imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
+          id: 1,
+          linkUrl: "shop/hats",
+          size: "",
         },
         {
           title: "jackets",
-          id: 4,
-          subtitle: "Shop Now",
+          imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
+          id: 2,
+          linkUrl: "shop/jackets",
+          size: "",
         },
         {
           title: "sneakers",
+          imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
+          id: 3,
+          linkUrl: "shop/sneakers",
+          size: "",
+        },
+        {
+          title: "womens",
+          imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
+          id: 4,
+          linkUrl: "shop/womens",
+          size: "large",
+        },
+        {
+          title: "mens",
+          imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
           id: 5,
-          subtitle: "Shop Now",
+          linkUrl: "shop/mens",
+          size: "large",
         },
       ],
     };
@@ -38,7 +48,11 @@ class HomePage extends React.Component {
 
   render() {
     const { sections } = this.state;
-    return <MenuList sections={sections}></MenuList>;
+    return (
+      <div className="homepage">
+        <MenuList sections={sections}></MenuList>
+      </div>
+    );
   }
 }
 
