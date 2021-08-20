@@ -4,6 +4,8 @@ import React from "react";
 
 class HomePage extends React.Component {
   constructor(props) {
+    console.log(props);
+
     super(props);
     this.state = {
       sections: [
